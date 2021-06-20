@@ -1,0 +1,205 @@
+
+
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="imagenes/mex.png"/>
+
+	<title>RESERVACION</title>
+	
+	   <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	
+	<!-- Archivo CSS  -->
+	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+	<!-- archivo script  -->
+	<script src="js/datos-ajax.js"></script>
+	
+	<script>
+	window.onload=function(){
+	document.getElementById("playa").value="";
+	};</script>	
+	
+</head>
+<body>
+
+<!-- Header Menu - comienzo  -->
+
+<header>
+
+<nav class="navbar">
+    <ul>
+        <li style="--i:1;"><a href="index.html">Inicio</a></li>
+		<li style="--i:2;"><a href="registro.html">Registro</a></li>
+        <li style="--i:3;"><a href="playas.html">Playas </a></li>
+        <li style="--i:4;"><a href="hotel-disponibilidad.html">Hoteles y Disponibilidad</a></li>
+        <li style="--i:5;"><a href="paquetes.html">Paquetes</a></li>
+		<li style="--i:6;"><a href="reservacion.html">Reservación</a></li>
+		<li style="--i:7;"><a href="facturacion.php">Facturacion</a></li>
+    </ul>
+</nav>
+
+<div class="menu"><i class="fas fa-bars"></i></div>
+
+</header>
+
+<!-- Header Menu - fin -->
+
+<!-- Seccion Inicio - comienzo -->
+
+<section class="inicio" id="inicio">
+
+<div class="content">
+
+    <h1>¡Tu destino te espera!</h1>
+    <h3>¡Reserva ahora!</h3>
+	<h4>No olvide revisar las políticas de la empresa.* </h4>
+
+
+    <div class="form-container">
+
+        <form action="reservacion.php" method="POST">
+		
+
+            <h3>Hoteles y disponibilidad</h3>
+			
+
+            <span>Selecciona la playa</span>
+            <select id="playa" name="playa" required>
+			
+			<option value="" required>
+			Elige la playa deseada
+			</option> 
+			
+			<option value="1"required>
+			Cabo San Lucas 
+			</option> 
+			
+			<option value="2"required>
+			Playa Bagdad
+			</option> 
+			
+			<option value="3"required>
+			Huatulco
+			</option> 
+			
+			<option value="4"required>
+			Cancún
+			</option> 
+			</select>
+
+            <span>Hotel deseado</span>
+			<select id="hoteles" name="hoteles" required>
+									
+			</select>
+            
+            <span>Fecha ingreso</span>
+            <input type="date" name="ingreso" required id="ingreso">
+
+            <span>Fecha salida</span>
+            <input type="date" name="salida" required id="salida">
+			
+			<span>Adultos</span>
+            <input type="number" name="adultos" required>
+			
+			<span>Niños</span>
+            <input type="number" name="ninos" required>
+			
+			<span>Paquetes</span>
+			<select id="paquetes" name="paquetes" required>
+			<option value="">
+			Elige tu paquete
+			</option> 
+			
+			<option value="0" required>
+			Paquete convenio "DASC"
+			</option> 
+			
+			<option value="1" required>
+			Paquete Básico
+			</option> 
+			
+			<option value="2" required> 
+			Paquete Intermedio
+			</option> 
+			
+			<option value="3" required>
+			Paquete Lux
+			</option> 
+			
+			</select>
+			
+			<span>Tipo de habitación</span>
+			<select id="habitacion" name="habitacion" required>
+							
+			</select>
+			
+			<h2> </br>* Póliticas de la empresa</br></h2>
+			
+			<h5>►No se pueden realizar cambios en la reservación.</br> 
+				►No hay cancelaciones.</br>
+				►El pago se realiza con su hoja de reservación al llegar al hotel. 
+			</h5>
+			
+			<input class="btn" type="submit" value="Cancelar" name="cancelar">
+			<input class="btn" type="submit" value="Reservar">
+            </form>
+					
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- Seccion inicio - fin -->
+
+<script>
+ingreso.min= new Date().toISOString().split("T")[0]; 
+
+salida.min= new Date().toISOString().split("T")[0]; 
+</script> 
+
+<!-- Seccion footer - inicio  -->
+
+<section class="footer">
+
+<div class="box">
+    <h3>Nota:</h3>
+    <p>Proyecto escolar realizado para la 
+	Universidad "DASC" bajo las materias de 
+	Arquitectura y diseño para la web III y 
+	Desarrollo de aplicaciones cliente-servidor II, 
+	por lo tanto los precios y paquetes, son ficticios.</p>
+</div>
+
+<div class="box">
+    <h3>Redes Sociales</h3>
+    <a href="https://www.facebook.com/Viajes-Enam%C3%B3rate-de-M%C3%A9xico-104267155204069/?ref=pages_you_manage">facebook</a>
+    <a href="https://www.youtube.com/channel/UCe3mfgn2EQ3AvWg_eif4X4g">Youtube</a> 
+   
+</div>
+
+<h1 class="credit"> Sitio creado con fines escolares por <span> Marian Selene Ramírez Carsolio y Axel Marcos Brito</span> alumnos DASC . </h1>
+
+</section>
+
+<!-- Seccion footer - fin -->
+
+
+
+<!-- custom js file link  -->
+<script src="js/main.js"></script>
+
+<!-- archivo script  -->
+<script src="js/jquery.confirm-action.js"></script>
+
+
+
+</body>
+</html>
